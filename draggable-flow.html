@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>GoJS Making Flow - Canvas</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/semantic.min.css">
+    <link rel="stylesheet prefetch"
+          href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css">
+
+    <script src="js/semantic.min.js"></script>
+    <script src="js/go.js"></script>
+    <script src="js/Figures.js"></script>
+    <script src="js/config.js"></script>
+
+    <style>
+        #myDiagramDiv {
+            width: 100%;
+            height: 50%;
+            border: 2px solid rebeccapurple;
+        }
+    </style>
+</head>
+<body onload="init('myDiagramDiv')">
+
+<div style="width: 100%; display: flex; justify-content: space-between">
+    <div id="myPaletteDiv"
+         style="width: 150px; margin-right: 2px; background-color: whitesmoke; border: solid 1px black"></div>
+
+    <div id="myDiagramDiv" style="flex-grow: 1; height: 500px; border: solid 1px black"></div>
+</div>
+
+<div>
+    <br>
+    <div class="ui grid" style="padding: 0 14px">
+        <div class="two wide column">
+            <button class="positive ui button fluid" id="SaveButton" onclick="save()">
+                <i class="save icon"></i>
+                Save
+            </button>
+        </div>
+        <div class="two wide column">
+            <button class="ui button fluid" onclick="load()">
+                <i class="sync alternate icon"></i>
+                Load
+            </button>
+        </div>
+        <div class="six wide column">
+            <!--            <button class="fluid ui button">Fits container</button>-->
+        </div>
+    </div>
+
+    <div class="ui divider"></div>
+
+    <h3 class="ui dividing header" style="padding-left: 14px">
+        <label for="mySavedModel">
+            Saved Model
+        </label>
+    </h3>
+
+    <textarea id="mySavedModel" style="width:100%;height:300px"></textarea>
+</div>
+
+</body>
+<!--<script src="https://unpkg.com/gojs@2.1/release/go.js"></script>-->
+
+</html>
